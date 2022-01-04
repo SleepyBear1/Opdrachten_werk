@@ -1,0 +1,253 @@
+
+body {
+    margin: 0;
+}
+
+/* Nav */
+
+header {
+    height: 75px;
+    background-color: black;
+}
+
+.companyName {
+	padding: 18px 0px 18px 15%;
+	margin: 0;
+	float: left;
+	color: #fff;
+	width: 28%;
+	font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+	font-size: 1.8rem;
+	text-align: left;
+    font-variant: small-caps;
+}
+
+nav {
+	padding: 0;
+	margin: 0;
+	width: 55%;
+	float: right;
+}
+
+header nav ul {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+header nav ul li {
+	float: left;
+	margin: 0;
+	display: inline;
+	width: 25%;
+	text-align: center;
+}
+
+header nav ul li:hover {
+	background: none;
+    font-style: bold;
+    transform: scale(1.2);
+}
+
+header nav ul li a {
+	text-decoration: none;
+	padding: 25px 20px;
+	color: #fff;
+	margin: 0;
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1rem;
+}
+
+header nav ul li a:focus {
+	outline: none;
+}
+
+/* Welcome message */
+
+.welcome {
+    background: url(https://images.unsplash.com/photo-1639400440317-54a35a504ef7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1164&q=80);
+    background-size: cover;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+.welcome p {
+    font-size: 20px;
+    
+}
+
+.welcome h1 {
+    padding-top: 200px;
+    font-size: 55px;
+    margin-top: 0px;
+}
+
+.welcome button {
+    border-radius: 15px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: none;
+    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom:50px
+}
+
+.welcome button a {
+    text-decoration: none;
+    color: black;
+}
+
+.welcome button:hover {
+    font-weight: 600;
+}
+
+/* first post */
+
+.post {
+    margin-top: 100px;
+    margin-bottom: 100px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "image-left main-text image-right"
+      "image-left main-text image-right"
+      ". . .";
+}
+  
+.image-right { grid-area: image-right; }
+  
+.image-left { grid-area: image-left; }
+  
+.main-text { grid-area: main-text; }
+
+.image-left {
+    background-image: url(https://images.unsplash.com/photo-1640085345163-8f1de649893e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+    background-size: cover;
+}
+
+.image-right {
+    background-image: url(https://images.unsplash.com/photo-1639287355996-6ebc403a4d6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+    background-size: cover;
+}
+
+.main-text {
+    padding: 20px;
+    text-align: center;
+}
+
+.main-text button {
+    border-radius: 15px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: none;
+    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom:50px
+}
+
+.main-text button a {
+    text-decoration: none;
+    color: black;
+}
+
+.main-text button:hover {
+    font-weight: 600;
+}
+
+/* footer  */
+
+footer {
+    background-color: black;
+    bottom: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    flex:1;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li{
+	margin: 0;
+	display: inline;
+	width: 25%;
+	text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+	padding: 15px 10px;
+	color: #fff;
+	margin: 0;
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 15px;
+}
+
+footer p {
+    color: white;
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+.first-menu {
+    padding-left: none;
+}
+
+@media (max-width:900px) {
+    .companyName {
+      width: 92%;
+      text-align: center;
+      padding: 4% 4%;
+    }
+    
+   .mainNav {
+      width: 100%;
+    }
+
+    header {
+        height: 170px;
+    }
+    
+    header nav ul {
+      border: none;
+    }
+    
+    header nav ul li a {
+      padding: 25px 2%;
+    }
+
+}
+
+@media (max-width:700px) {
+    .post {  
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "main-text main-text"
+          "image-left image-right"
+          "image-left image-right"; 
+      }
+      .image-left { grid-area: image-left; }
+      .image-right { grid-area: image-right; }
+      .main-text { grid-area: main-text; }
+      
+
+}
